@@ -13,7 +13,7 @@
     $extension_image = array('image/jpg', 'image/jpeg', 'image/png');
     $type_image = getimagesize($nom_image);
 
-   
+    
             
         if($_FILES['image']['error'] > 0){
             echo "Erreur lors du transfert";

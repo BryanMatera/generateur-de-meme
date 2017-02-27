@@ -1,0 +1,19 @@
+body{
+	margin: 0;
+}
+header{
+	display: flex;
+	height: 100px;
+	background-color: darkgrey;
+	justify-content: space-around;
+	align-items: center;
+}
+a{
+	text-decoration: none;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 150px;
+	border: 1px solid red;
+	border-radius: 20px;
+}
