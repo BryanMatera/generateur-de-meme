@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 
 //----------------------------------FONCTION UPLOAD DIMAGE----------------------------------------
@@ -22,14 +23,11 @@
             echo "Ce fichier est trop lourd";
         }
         else if(in_array($type_image['mime'], $extension_image)){
-        	//-----
-        	//CONVERTIR TOUTES LES IMAGES EN JPEG OU JPG ICI !!!!
-        	//CONVERTIR TOUTES LES IMAGES EN JPEG OU JPG ICI !!!!
-        	//CONVERTIR TOUTES LES IMAGES EN JPEG OU JPG ICI !!!!
-        	//--
-
+            
             move_uploaded_file($nom_image,$image);
+            $_SESSION['image'] = $image;
     		echo "<img src='$image'/>";
+            
         }
         else{
             echo "Ce fichier n'est pas une image";
