@@ -7,6 +7,9 @@
 <head>
 	<title>Page Accueil</title>
 	<link rel="stylesheet" type="text/css" href="page_accueil.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 <body>
 	<header>
@@ -23,8 +26,8 @@
 			<a href="detailsmeme.php?id=<?= $meme->nom; ?>"><img class="memedefaut" src="images/memeDefaut/<?= $meme->nom; ?>.jpg"/></a>
 			<p><?= $meme->nom; ?></p>
 			<p>Créé par : <?= $meme->auteur; ?></p>
-			<a href="https://twitter.com/share?url=<?= $url; ?><?= $meme->nom; ?>">twitter</a>
-			
+			<a href="https://twitter.com/share?url=<?= $url; ?><?= $meme->nom; ?>" class="fa fa-twitter twitter"></a>
+
 			</div>
 		<?php endforeach; ?>
 	</div>

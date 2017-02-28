@@ -37,3 +37,10 @@ img{
 	border: 1px solid darkgrey;
 	background-color: beige;
 }
+.twitter{
+	text-decoration: none;
+	color: black;
+}
+.twitter:hover{
+	color: red;
+}
