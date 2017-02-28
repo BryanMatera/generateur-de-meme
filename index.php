@@ -1,5 +1,6 @@
 <?php 
 	require 'connexion.php';
+	$DB = new DB();
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,12 +11,16 @@
 <body>
 	<header>
 		<div class="logo">Meme generator</div>
-		<a href="creationmemes.php">Je créé mon meme</a>
+		<a class="créer" href="creationmemes.php">Je créé mon meme</a>
 	</header>
-	<div>
+	</br>
+	<div class="memepresentation">
 		<?php 
+		$memes = $DB->query('SELECT * FROM memedefaut');
+		foreach ($memes as $meme) : ?>
+			<a href="detailsmeme.php?id=<?= $meme->id;?>"><img class="memedefaut" src="images/memeDefaut/meme<?= $meme->id; ?>.jpg"/></a>
 
-		?> 
+		<?php endforeach; ?> 
 	</div>
 </body>
 </html>
