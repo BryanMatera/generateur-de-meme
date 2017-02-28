@@ -31,25 +31,40 @@ if(isset($_POST['texteHaut']) && !empty($_POST['texteHaut']) || isset($_POST['te
 
 	$post = $_POST['texteHaut']; //input text
 	$color = $_POST['colorHaut'];	//input color, recupere #$$$$$$
+	$tailleHaut = $_POST['tailleHaut'];
+	$rotationHaut = $_POST['rotationHaut'];
+	$topPhraseHaut = $_POST['topPhraseHaut'];
+	$leftPhraseHaut = $_POST['leftPhraseHaut'];
 	$colorRgb = hex2rgb($color); //converti coleur hexa en rgba
 	$c1 = $colorRgb[0];
 	$c2 = $colorRgb[1];
 	$c3 = $colorRgb[2];
 
+
 	$post1 = $_POST['texteBas']; //input text
 	$color1 = $_POST['colorBas'];	//input color, recupere #$$$$$$
+	$tailleBas = $_POST['tailleBas'];
+	$rotationBas = $_POST['rotationBas'];
+	$topPhraseBas = $_POST['topPhraseBas'];
+	$leftPhraseBas = $_POST['leftPhraseBas'];
 	$colorRgb1 = hex2rgb($color1); //converti coleur hexa en rgba
 	$c11 = $colorRgb1[0];
 	$c21 = $colorRgb1[1];
-	$c31 = $colorRgb1[2];$image = imagecreatefromjpeg($_SESSION['image']);
+	$c31 = $colorRgb1[2];
+										  
+										  
+										  
+										  
+
+	$image = imagecreatefromjpeg($_SESSION['image']);
 
 $couleur1 = imagecolorallocate($image, $c11, $c21, $c31);
 $couleur2 = imagecolorallocate($image, $c1, $c2, $c3);
 
 
 //imagestring($image, 5, 50, 150, $post1, $couleur1);
-imagettftext($image, 15, 10, 50, 50, $couleur2, 'ifti.ttf', $post);
-imagettftext($image, 15, -10, 30, 150, $couleur1, 'ifti.ttf', $post1);
+imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/ifti.ttf', $post);
+imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/ifti.ttf', $post1);
 
 	
 	ob_start();
