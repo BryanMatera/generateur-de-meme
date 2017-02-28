@@ -8,7 +8,7 @@ header{
 	justify-content: space-around;
 	align-items: center;
 }
-a{
+.créer{
 	text-decoration: none;
 	text-align: center;
 	padding-top: 10px;
@@ -16,4 +16,14 @@ a{
 	width: 150px;
 	border: 1px solid red;
 	border-radius: 20px;
+}
+.memepresentation{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	margin-left: 25%;
+}
+.memedefaut{
+	width: 225px;
+	height: 225px;
 }

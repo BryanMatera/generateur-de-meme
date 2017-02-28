@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 27 Février 2017 à 15:45
+-- Généré le :  Mar 28 Février 2017 à 14:01
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `imagedefaut` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chemin` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Contenu de la table `imagedefaut`
@@ -50,6 +50,7 @@ INSERT INTO `imagedefaut` (`id`, `chemin`) VALUES
 CREATE TABLE IF NOT EXISTS `memedefaut` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
+  `auteur` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
@@ -57,24 +58,11 @@ CREATE TABLE IF NOT EXISTS `memedefaut` (
 -- Contenu de la table `memedefaut`
 --
 
-INSERT INTO `memedefaut` (`id`, `nom`) VALUES
-(1, 'meme1.jpg'),
-(3, 'meme2.jpg'),
-(5, 'meme3.jpg'),
-(7, 'meme4.jpg');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `memes`
---
-
-CREATE TABLE IF NOT EXISTS `memes` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `chemin` varchar(255) NOT NULL,
-  `auteur` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+INSERT INTO `memedefaut` (`id`, `nom`, `auteur`) VALUES
+(1, 'meme1', ''),
+(3, 'meme3', ''),
+(5, 'meme5', ''),
+(7, 'meme7', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
