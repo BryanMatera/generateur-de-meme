@@ -18,7 +18,7 @@
 		<?php 
 		$memes = $DB->query('SELECT * FROM memedefaut');
 		foreach ($memes as $meme) : ?>
-			<a href="detailsmeme.php?id=<?= $meme->id;?>"><img class="memedefaut" src="images/memeDefaut/meme<?= $meme->id; ?>.jpg"/></a>
+			<a href="detailsmeme.php?id=<?= $meme->nom;?>"><img class="memedefaut" src="images/memeDefaut/meme<?= $meme->id; ?>.jpg"/></a>
 
 		<?php endforeach; ?> 
 	</div>

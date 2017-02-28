@@ -6,9 +6,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Meme | <?= $id_meme;?></title>
+	<link rel="stylesheet" type="text/css" href="page_accueil.css">
 </head>
 <body>
-	<img src="images/memeDefaut/meme<?= $id_meme; ?>.jpg">
+	<header>
+		<div class="logo">Meme generator</div>
+		<a class="créer" href="creationmemes.php">Je créé mon meme</a>
+	</header>
+	</br>
+	<img src="images/memeDefaut/<?= $id_meme; ?>.jpg">
 </body>
 </html>
