@@ -1,7 +1,8 @@
 <?php
 
 class DB{
-	private $host = "localhost";
+	
+	public $host = "localhost";
     private $identifiant = "root";
     private $mdp = "";
     private $nom_bd = "meme";

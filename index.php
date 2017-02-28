@@ -17,10 +17,16 @@
 	<div class="memepresentation">
 		<?php 
 		$memes = $DB->query('SELECT * FROM memedefaut');
+		$url = "http://localhost/13_meme_generator/detailsmeme.php?id=";
 		foreach ($memes as $meme) : ?>
-			<a href="detailsmeme.php?id=<?= $meme->nom;?>"><img class="memedefaut" src="images/memeDefaut/meme<?= $meme->id; ?>.jpg"/></a>
-
-		<?php endforeach; ?> 
+			<div class="meme">
+			<a href="detailsmeme.php?id=<?= $meme->nom; ?>"><img class="memedefaut" src="images/memeDefaut/<?= $meme->nom; ?>.jpg"/></a>
+			<p><?= $meme->nom; ?></p>
+			<p>Créé par : <?= $meme->auteur; ?></p>
+			<a href="https://twitter.com/share?url=<?= $url; ?><?= $meme->nom; ?>">twitter</a>
+			
+			</div>
+		<?php endforeach; ?>
 	</div>
 </body>
 </html>
