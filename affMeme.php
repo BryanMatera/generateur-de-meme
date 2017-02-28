@@ -2,77 +2,62 @@
 
 session_start();
 
-
-
-//----------------------------FONCTION CONVERTISSEUR HEXA EN RGBA----------------------
-function hex2rgb($hex) {
-	$hex = str_replace("#", "", $hex);
-
-	if(strlen($hex) == 3) {
-		$r = hexdec(substr($hex,0,1).substr($hex,0,1));
-		$g = hexdec(substr($hex,1,1).substr($hex,1,1));
-		$b = hexdec(substr($hex,2,1).substr($hex,2,1));
-	} else {
-		$r = hexdec(substr($hex,0,2));
-		$g = hexdec(substr($hex,2,2));
-		$b = hexdec(substr($hex,4,2));
-	}
-$rgb = array($r, $g, $b);
-
-return $rgb; // returns an array with the rgb values
-}
-
-
-
 //--------------------------------------AJOUT TEXTE ET COULEUR DE TEXTE A LIMAGE-------------
 
 if(isset($_POST['texteHaut']) && !empty($_POST['texteHaut']) || isset($_POST['texteBas']) && !empty($_POST['texteBas'])) {
 	
 
-	$post = $_POST['texteHaut']; //input text
-	$color = $_POST['colorHaut'];	//input color, recupere #$$$$$$
-	$tailleHaut = $_POST['tailleHaut'];
+	$post = $_POST['texteHaut']; //on recupere les donnes envoyées en ajax(valeur input de modifs)texte du haut
+	$color = $_POST['colorHaut'];	
+	$tailleHaut = $_POST['tailleHaut'];//on recupere les donnes envoyées en ajax(valeur input de modifs)texte du haut
 	$rotationHaut = $_POST['rotationHaut'];
-	$topPhraseHaut = $_POST['topPhraseHaut'];
-	$leftPhraseHaut = $_POST['leftPhraseHaut'];
-	$colorRgb = hex2rgb($color); //converti coleur hexa en rgba
-	$c1 = $colorRgb[0];
-	$c2 = $colorRgb[1];
-	$c3 = $colorRgb[2];
+	$topPhraseHaut = $_POST['topPhraseHaut'];//on recupere les donnes envoyées en ajax(valeur input de modifs)texte du haut
+	$leftPhraseHaut = $_POST['leftPhraseHaut'];//on recupere les donnes envoyées en ajax(valeur input de modifs)texte du haut
+	require_once 'hex2rgb.php'; //appel de la page contenat la fonction hex to rgb
+	$colorRgb = hex2rgb($color); // on converti la valeur hexa de linput type color en rgba (texte du haut)
+	$c1 = $colorRgb[0]; //red de rgb
+	$c2 = $colorRgb[1]; // green  
+	$c3 = $colorRgb[2]; //blue
 
 
-	$post1 = $_POST['texteBas']; //input text
-	$color1 = $_POST['colorBas'];	//input color, recupere #$$$$$$
+	$post1 = $_POST['texteBas']; //on recupere les valeurs envoyes en ajax(valeur input de modifs) texte du bas
+	$color1 = $_POST['colorBas'];	//on recupere les valeurs envoyes en ajax(valeur input de modifs) texte du bas
 	$tailleBas = $_POST['tailleBas'];
-	$rotationBas = $_POST['rotationBas'];
+	$rotationBas = $_POST['rotationBas'];//on recupere les valeurs envoyes en ajax(valeur input de modifs) texte du bas
 	$topPhraseBas = $_POST['topPhraseBas'];
-	$leftPhraseBas = $_POST['leftPhraseBas'];
-	$colorRgb1 = hex2rgb($color1); //converti coleur hexa en rgba
-	$c11 = $colorRgb1[0];
-	$c21 = $colorRgb1[1];
-	$c31 = $colorRgb1[2];
+	require_once 'hex2rgb.php';//appel de la page contenat la fonction hex to rgb
+	$leftPhraseBas = $_POST['leftPhraseBas'];//on recupere les valeurs envoyes en ajax(valeur input de modifs) texte du bas
+	$colorRgb1 = hex2rgb($color1); //on converti la valeur hexa de linput type color en rgba (texte du bas)
+	$c11 = $colorRgb1[0];//red rgb
+	$c21 = $colorRgb1[1]; //green
+	$c31 = $colorRgb1[2]; //blue
 										  
 										  
 										  
 										  
 
-	$image = imagecreatefromjpeg($_SESSION['image']);
+	$image = imagecreatefromjpeg($_SESSION['image']); //on cree limage sur laquel fair les modifs..image uploadee
 
-$couleur1 = imagecolorallocate($image, $c11, $c21, $c31);
-$couleur2 = imagecolorallocate($image, $c1, $c2, $c3);
+	$couleur1 = imagecolorallocate($image, $c11, $c21, $c31); //la couleur du texte du bas
+	$couleur2 = imagecolorallocate($image, $c1, $c2, $c3); //la couleur du texte du haut
 
 
-//imagestring($image, 5, 50, 150, $post1, $couleur1);
-imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/ifti.ttf', $post);
-imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/ifti.ttf', $post1);
+	//On insere dans limage les deux textes, ils prennent en comte les valeur des input de modifs
+	// envoyes en ajax, ce qui nous permet la modif en temps reel  lappui du bouton preview
+	imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/ifti.ttf', $post);
+	imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/ifti.ttf', $post1);
 
 	
-	ob_start();
+	ob_start(); //debut variable
+
 		imagejpeg($image);
-    $objet = ob_get_contents();
-    ob_end_clean ();
-	$enc = base64_encode($objet);
-	echo($enc);
+    	$objet = ob_get_contents();//on place limage dans un variable pour laffichage seulement
+
+    ob_end_clean ();//fin variable
+
+	//on encode en base 64 la variable de limage pour pouvoir la passer dans lattribut src de <img>
+	$enc = base64_encode($objet); 
+	echo($enc); // preview de limage modifiée
 
 
 
