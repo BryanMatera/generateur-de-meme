@@ -17,7 +17,12 @@ header{
 	padding-bottom: 10px;
 	width: 150px;
 	border: 1px solid red;
+	color: black;
 	border-radius: 20px;
+}
+.créer:hover{
+	text-decoration: none;
+	color: black;
 }
 .memepresentation{
 	display: flex;
@@ -43,4 +48,5 @@ img{
 }
 .twitter:hover{
 	color: red;
+	text-decoration: none;
 }
