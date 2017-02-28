@@ -1,6 +1,10 @@
 <?php
+
+
 session_start();
-header ("Content-type: image/jpeg");
+
+
+
 //----------------------------FONCTION CONVERTISSEUR HEXA EN RGBA----------------------
 function hex2rgb($hex) {
 	$hex = str_replace("#", "", $hex);
@@ -23,38 +27,48 @@ return $rgb; // returns an array with the rgb values
 
 //--------------------------------------AJOUT TEXTE ET COULEUR DE TEXTE A LIMAGE-------------
 
-if(isset($_POST['test']) && !empty($_POST['test']) && isset($_POST['test1']) && !empty($_POST['test1'])) {
-	if(isset($_POST['submit'])) {
+if(isset($_POST['texteHaut']) && !empty($_POST['texteHaut']) || isset($_POST['texteBas']) && !empty($_POST['texteBas'])) {
+	
 
-	$post = $_POST['test']; //input text
-	$color = $_POST['color'];	//input color, recupere #$$$$$$
+	$post = $_POST['texteHaut']; //input text
+	$color = $_POST['colorHaut'];	//input color, recupere #$$$$$$
 	$colorRgb = hex2rgb($color); //converti coleur hexa en rgba
 	$c1 = $colorRgb[0];
 	$c2 = $colorRgb[1];
 	$c3 = $colorRgb[2];
 
-	$post1 = $_POST['test1']; //input text
-	$color1 = $_POST['color1'];	//input color, recupere #$$$$$$
+	$post1 = $_POST['texteBas']; //input text
+	$color1 = $_POST['colorBas'];	//input color, recupere #$$$$$$
 	$colorRgb1 = hex2rgb($color1); //converti coleur hexa en rgba
 	$c11 = $colorRgb1[0];
 	$c21 = $colorRgb1[1];
 	$c31 = $colorRgb1[2];
-
 $image = imagecreatefromjpeg($_SESSION['image']);
 
-$orange = imagecolorallocate($image, $c11, $c21, $c31);
-$bleu = imagecolorallocate($image, $c1, $c2, $c3);
+$couleur1 = imagecolorallocate($image, $c11, $c21, $c31);
+$couleur2 = imagecolorallocate($image, $c1, $c2, $c3);
 
 
-imagestring($image, 5, 50, 50, $post, $bleu);
-imagestring($image, 5, 50, 150, $post1, $orange);
-imagejpeg($image);
+imagestring($image, 5, 50, 50, $post, $couleur2);
+imagestring($image, 5, 50, 150, $post1, $couleur1);
+if(isset($_POST['auteur']) && isset($_POST['nomMeme'])) {
+	$nomMeme = $_POST['nomMeme'];
+	$auteur = $_POST['auteur'];
+
+	
+	ob_start();
+		imagejpeg($image);
+    $objet = ob_get_contents();
+    ob_end_clean ();
+	$enc = base64_encode($objet);
+	echo($enc);
+	imagejpeg($image, 'images/memeFini/'.$nomMeme.'.jpg');
+
+}
+
 
 
 }
-}
-
-
 
 
 ?>
