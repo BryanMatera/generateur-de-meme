@@ -60,8 +60,9 @@
 	<input type="text" id="auteur" name="auteur" placeholder="Meme fait par : "><br>
 	<input type="text" id="nomMeme" name="nomMeme" placeholder="Nommez votre meme : "><br>
 	<input type="submit" id="submit1" name="submit1" value="Enregistrer">
+	<div id="recupAjax2" style="text-align: center;"></div>
 </form>
-<div id="recupAjax2"></div>
+
 
 
 <script type="text/javascript" src="ajax.js"></script> 

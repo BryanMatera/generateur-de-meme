@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 28 Février 2017 à 14:01
+-- Généré le :  Mer 01 Mars 2017 à 14:17
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -52,17 +52,17 @@ CREATE TABLE IF NOT EXISTS `memedefaut` (
   `nom` varchar(255) NOT NULL,
   `auteur` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
 
 --
 -- Contenu de la table `memedefaut`
 --
 
 INSERT INTO `memedefaut` (`id`, `nom`, `auteur`) VALUES
-(1, 'meme1', ''),
-(3, 'meme3', ''),
-(5, 'meme5', ''),
-(7, 'meme7', '');
+(1, 'meme1', 'Admin'),
+(3, 'meme3', 'Admin'),
+(5, 'meme5', 'Admin'),
+(7, 'meme7', 'Admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

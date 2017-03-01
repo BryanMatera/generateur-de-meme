@@ -77,9 +77,9 @@ $(document).ready(function () {
 										{
 											
 										});
-			alert('bjr');
-			$('#recupAjax2').html('<a id="teleMemeFini" style="width: 200px; height: 100px;" href="images/memeFini/'+ nomMeme +'.png" download>Télécharger votre meme</a>');
-				
+			
+			$('#recupAjax2').html('<a style="width: 200px; height: 100px;" href="images/memeFini/'+ nomMeme +'.png" download>Télécharger votre meme</a>');
+			
             });
 
             
