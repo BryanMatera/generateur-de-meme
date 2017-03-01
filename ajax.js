@@ -58,6 +58,7 @@ $(document).ready(function () {
 			var topPhraseHaut = $('#top').val();//valeur des input des modifs 
 			var leftPhraseBas = $('#left1').val();
 			var topPhraseBas = $('#top1').val();
+			var submit = $('#submit1').val();
 				
 				$.post('enrMeme.php',{  'auteur':auteur, //ces ces valeur envoyés pour enregistrement du meme qui se fait dans la page php
 										'nomMeme':nomMeme, 

@@ -11,16 +11,21 @@
 </head>
 <body>
 
-<h1>HELLO WORLD !!</h1>
+<h1>Créer votre propre meme ici !!</h1>
 
 <form method="post" action="" enctype="multipart/form-data"><!--Formulaire d'upload dimage-->
 	<input type="file" name="image"/>
-	<input type="submit" name="submit" value="Uploader" />
+	<input type="submit" name="submit" value="Uploader" /><label>Image de type .png ou .jpg seulement</label>
 </form>
 <?php 
 	require 'upoadFunc.php'; //fichier conentant la fonction dupload dimages
 ?>
 
+
+<div id="recupAjax">
+	<img id="image"/> <!--image affichée prete a etre modifié, appelée en ajax-->
+</div>
+<p>Faites une première modification pour prévisualiser votre meme</p>
 <form method="post" id="formAjoutText" action=""><!--formulaire dajout de texte a limage-->
 									<!--texte du haut-->
 									<input class="change" type="text" name="test" id="test" value="Texte du haut" >
@@ -42,9 +47,7 @@
 
 </form> <!--fin de formulaire de modification dimage-->
 
-<div id="recupAjax">
-	<img id="image" width="300"/> <!--image affichée prete a etre modifié, appelée en ajax-->
-</div>
+
 
 
 <form> <!--formulaire d'enregistrement du meme terminé, appelé en ajax, c pour ca que le <form> na pas datribut-->

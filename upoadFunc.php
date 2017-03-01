@@ -26,6 +26,7 @@ session_start();
             
             move_uploaded_file($nom_image,$image);
             $_SESSION['image'] = $image;
+            $_SESSION['chemin'] = $_FILES['image']['tmp_name'];
             
         }
         else{
