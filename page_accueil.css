@@ -24,21 +24,24 @@ header{
 	text-decoration: none;
 	color: black;
 }
+.logo{
+	text-decoration: none;
+	color: black;
+}
 .memepresentation{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	width: 76%;
 	margin-left: 12%;
 }
 .memedefaut{
 	width: 225px;
 	height: 225px;
-}
-img{
 	border-bottom: 1px solid darkgrey;
 }
 .meme{
+	margin-bottom: 15px;
 	text-align: center;
 	border: 1px solid darkgrey;
 	background-color: beige;
@@ -50,4 +53,25 @@ img{
 .twitter:hover{
 	color: red;
 	text-decoration: none;
+}
+
+/*---------------------------PAGE DETAILS--------------------*/
+
+.presentation{
+	display: flex;
+	width: 40%;
+	margin-left: 30%;
+	border: 1px solid darkgrey;
+	background-color: beige;
+}
+.imagedetail{
+	width:50%;
+	height: 50%;
+}
+.rien{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 50%;
+	width: 100%;
 }

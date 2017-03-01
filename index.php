@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	require 'connexion.php';
 	$DB = new DB();
 ?>
@@ -12,20 +13,22 @@
 </head>
 <body>
 	<header>
-		<div class="logo">Faites qu'on meme</div>
+		<a class="logo" href="index.php">FQM<span>Faites qu'on meme</span></a>
 		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
 	</header>
 	</br>
 	<div class="memepresentation">
 		<?php 
-		$memes = $DB->query('SELECT * FROM memedefaut');
+		$memes = $DB->query('SELECT * FROM memedefaut ORDER BY id DESC');
 		$url = "http://localhost/13_meme_generator/detailsmeme.php?id=";
-		foreach ($memes as $meme) : ?>
+
+		foreach ($memes as $meme) :	?>
 			<div class="meme">
-			<a href="detailsmeme.php?id=<?= $meme->nom; ?>"><img class="memedefaut" src="images/memeDefaut/<?= $meme->nom; ?>.jpg"/></a>
+			<a href="detailsmeme.php?id=<?= $meme->nom; ?>&name=<?= $meme->auteur; ?>"><img class="memedefaut" src="images/memeFini/<?= $meme->nom; ?>.png"/></a>
 			<p><?= $meme->nom; ?></p>
 			<p>Créé par : <?= $meme->auteur; ?></p>
-			<a href="https://twitter.com/share?url=<?= $url; ?><?= $meme->nom; ?>" class="fa fa-twitter twitter"></a>
+			<a href="http://www.facebook.com/sharer/sharer.php?url=<?= $url; ?><?= $meme->nom; ?>" class="fa fa-facebook twitter" target="_blank"></a>
+			<a href="https://twitter.com/intent/tweet/?url=<?= $url; ?><?= $meme->nom; ?>" class="fa fa-twitter twitter" target="_blank"></a>
 
 			</div>
 		<?php endforeach; ?>
