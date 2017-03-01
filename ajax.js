@@ -40,7 +40,7 @@ $(document).ready(function () {
 			}
     });
 
-    $(".change").on('change keyup', function (e) 
+    $("#submit1").on('click', function (e) 
     { //submit du formulaire qui enregistre le meme avec les modifications
 
         e.preventDefault();
