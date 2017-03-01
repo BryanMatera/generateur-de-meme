@@ -7,14 +7,13 @@
 <head>
 	<title>Page Accueil</title>
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="page_accueil.css">
 
 </head>
 <body>
 	<header>
 		<div class="logo">Faites qu'on meme</div>
-		<a class="créer" href="creationmemes.php">Je créé mon meme</a>
+		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
 	</header>
 	</br>
 	<div class="memepresentation">

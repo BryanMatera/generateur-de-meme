@@ -10,7 +10,7 @@ header{
 }
 
 /*-----------------------PAGE ACCUEIL------------------------*/
-.créer{
+.creer{
 	text-decoration: none;
 	text-align: center;
 	padding-top: 10px;
@@ -20,15 +20,16 @@ header{
 	color: black;
 	border-radius: 20px;
 }
-.créer:hover{
+.creer:hover{
 	text-decoration: none;
 	color: black;
 }
 .memepresentation{
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
-	margin-left: 25%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 76%;
+	margin-left: 12%;
 }
 .memedefaut{
 	width: 225px;
