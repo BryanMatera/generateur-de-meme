@@ -9,6 +9,7 @@
 <head>
 	<title>Meme | <?= $id_meme;?></title>
 	<link rel="stylesheet" type="text/css" href="page_accueil.css">
+	<meta charset="utf-8">
 </head>
 <body>
 	<header>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Je créé mon meme</title>
-	<meta charser="utf-8">
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styleCreation.css">
 	<script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
