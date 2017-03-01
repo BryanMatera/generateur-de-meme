@@ -14,7 +14,7 @@
 <body>
 	<header>
 
-		<a class="logo" href="index.php">FQM<span >Faites qu'on meme</span></a>
+		<a class="logo" href="index.php">FQM<span id="spanLogo">Faites qu'on meme</span></a>
 		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
 
 	</header>
