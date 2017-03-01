@@ -13,13 +13,10 @@
 </head>
 <body>
 	<header>
-<<<<<<< HEAD
-		<p class="logo">FQM<span id="spanLogo">Faut qu'on meme</span></p>
-		<a class="creer" href="index.php">Voir les autres memes</a>
-=======
+
 		<a class="logo" href="index.php">FQM<span >Faites qu'on meme</span></a>
 		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
->>>>>>> 5b6ecf1605c0c12456d6ae3411e426aacf0dec18
+
 	</header>
 	</br>
 	<div class="memepresentation">
