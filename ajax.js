@@ -82,5 +82,16 @@ $(document).ready(function () {
 			
             });
 
+$("#submit1").on('click', function (eve) 
+    {
+    	var champ1 = $('#auteur').val();
+    	var cham2 = $('#nomMeme').val();
+    	if(champ1 !== "" && champ2 !== "") {
+
+    	} else {
+    		eve.preventDefault();
+    		alert('Remplissez les champs demandés');
+    	}
+    });
             
  });

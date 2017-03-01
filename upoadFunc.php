@@ -4,7 +4,7 @@ session_start();
 
 //----------------------------------FONCTION UPLOAD DIMAGE----------------------------------------
 
- if(isset($_POST['submit'])){
+ 
     $nom_image = $_FILES['image']['tmp_name'];
     $image = "images/imagesUpload/".$_FILES['image']['name'];
 
@@ -31,6 +31,6 @@ session_start();
         else{
             echo "Ce fichier n'est pas une image";
         }
-    }
+    
 
 ?>

@@ -70,7 +70,9 @@ h1 {
 	height: 50px;
 }
 
-
+#formAjoutText, #formEnregistrement {
+	visibility: hidden;
+}
 
 @media screen and (max-width: 450px) {
 

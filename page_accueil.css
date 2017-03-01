@@ -71,22 +71,18 @@ header{
 
 .presentation{
 	display: flex;
-	width: 40%;
-	margin-left: 30%;
+	flex-direction: column;
+	width: 35%;
+	margin-left: 32.5%;
 	border: 1px solid darkgrey;
 	background-color: beige;
 }
 .imagedetail{
-	width:50%;
-	height: 50%;
-}
-.rien{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 50%;
 	width: 100%;
 }
+
+
+
 
 @media screen and (max-width: 450px) {
 
@@ -105,6 +101,11 @@ header{
 		text-align: center;
 		font-size: 25px;
 		margin-top: 0px;
+	}
+
+	.presentation {
+		width: 90%;
+		margin-left: 5%;
 	}
   
 }

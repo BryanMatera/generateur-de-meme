@@ -19,19 +19,21 @@
 
 <form method="post" action="" id="formUploadImg" enctype="multipart/form-data"><!--Formulaire d'upload dimage-->
 	<input type="file" name="image"/>
-	<input type="submit" name="submit" value="Uploader" />
+	<input type="submit" name="submit" id="submit" value="Uploader" />
 </form><br><br>
 <?php 
+	if(isset($_POST['submit'])) {
 	require 'upoadFunc.php'; //fichier conentant la fonction dupload dimages
+}
 ?>
 
 
 <div id="recupAjax">
 	<img id="image"/> <!--image affichée prete a etre modifié, appelée en ajax-->
 </div>
-<p>Faites une première modification pour prévisualiser votre meme</p>
-<form method="post" id="formAjoutText" action=""><!--formulaire dajout de texte a limage-->
-									<!--texte du haut-->
+
+<form method="post" id="formAjoutText" action=""<?php if(isset($_POST['submit'])) { echo 'style="visibility: visible;"'; }?> ><!--formulaire dajout de texte a limage-->
+<p>Faites une première modification pour prévisualiser votre meme</p>									<!--texte du haut-->
 	<div id="texteHaut">
 	<input class="change" type="text" name="test" id="test" value="Texte du haut">
 	<input class="change" type="color" name="color" id="color"><!--sa couleur-->
@@ -56,7 +58,7 @@
 
 
 
-<form> <!--formulaire d'enregistrement du meme terminé, appelé en ajax, c pour ca que le <form> na pas datribut-->
+<form id="formEnregistrement"<?php if(isset($_POST['submit'])) { echo 'style="visibility: visible;"'; }?> > <!--formulaire d'enregistrement du meme terminé, appelé en ajax, c pour ca que le <form> na pas datribut-->
 	<input type="text" id="auteur" name="auteur" placeholder="Meme fait par : "><br>
 	<input type="text" id="nomMeme" name="nomMeme" placeholder="Nommez votre meme : "><br>
 	<input type="submit" id="submit1" name="submit1" value="Enregistrer">
