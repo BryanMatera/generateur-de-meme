@@ -8,6 +8,11 @@ header{
 	justify-content: space-around;
 	align-items: center;
 }
+<<<<<<< HEAD
+=======
+
+/*-----------------------PAGE ACCUEIL------------------------*/
+>>>>>>> 583d1431c81303a4d07e5f8b4eefd0d27755ed69
 .creer{
 	text-decoration: none;
 	text-align: center;
@@ -17,11 +22,19 @@ header{
 	border: 1px solid red;
 	border-radius: 20px;
 }
+<<<<<<< HEAD
+=======
+.creer:hover{
+	text-decoration: none;
+	color: black;
+}
+>>>>>>> 583d1431c81303a4d07e5f8b4eefd0d27755ed69
 .memepresentation{
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
-	margin-left: 25%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 76%;
+	margin-left: 12%;
 }
 .memedefaut{
 	width: 225px;
