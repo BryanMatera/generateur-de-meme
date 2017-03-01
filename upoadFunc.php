@@ -25,7 +25,6 @@ session_start();
             
             move_uploaded_file($nom_image,$image);
             $_SESSION['image'] = $image;
-    		echo "<img src='$image'/>";
             
         }
         else{
