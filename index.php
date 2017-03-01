@@ -13,7 +13,6 @@
 
 </head>
 <body>
-<!-- header -->
 	<header>
 
 		<p class="logo">FQM<span id="spanLogo">Faites qu'on meme</span></p>
