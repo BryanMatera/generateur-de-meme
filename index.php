@@ -14,7 +14,7 @@
 <body>
 	<header>
 		<div class="logo">Faites qu'on meme</div>
-		<a class="créer" href="creationmemes.php">Je créé mon meme</a>
+		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
 	</header>
 	</br>
 	<div class="memepresentation">

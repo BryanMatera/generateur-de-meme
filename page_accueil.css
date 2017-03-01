@@ -8,21 +8,14 @@ header{
 	justify-content: space-around;
 	align-items: center;
 }
-
-/*-----------------------PAGE ACCUEIL------------------------*/
-.créer{
+.creer{
 	text-decoration: none;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 150px;
 	border: 1px solid red;
-	color: black;
 	border-radius: 20px;
-}
-.créer:hover{
-	text-decoration: none;
-	color: black;
 }
 .memepresentation{
 	display: flex;
@@ -33,20 +26,4 @@ header{
 .memedefaut{
 	width: 225px;
 	height: 225px;
-}
-img{
-	border-bottom: 1px solid darkgrey;
-}
-.meme{
-	text-align: center;
-	border: 1px solid darkgrey;
-	background-color: beige;
-}
-.twitter{
-	text-decoration: none;
-	color: black;
-}
-.twitter:hover{
-	color: red;
-	text-decoration: none;
 }
