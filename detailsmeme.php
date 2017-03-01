@@ -1,7 +1,8 @@
-<?php 
+<?php
 	require 'connexion.php';
 
 	$id_meme = $_GET['id'];
+	$auteur_meme = $_GET['name'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,10 +12,16 @@
 </head>
 <body>
 	<header>
-		<div class="logo">Meme generator</div>
-		<a class="créer" href="creationmemes.php">Je créé mon meme</a>
+		<a class="logo" href="index.php">FQM<span>Faites qu'on meme</span></a>
+		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
 	</header>
 	</br>
-	<img src="images/memeDefaut/<?= $id_meme; ?>.jpg">
+	<div class="presentation">
+		<img class="imagedetail" src="images/memeFini/<?= $id_meme; ?>.png">
+		<div class="rien">
+			<h2><?= $id_meme; ?></h2>
+			<p>Créer par: <?=  $auteur_meme; ?></p>
+		</div>
+	</div>
 </body>
 </html>
