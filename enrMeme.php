@@ -39,8 +39,8 @@ if(isset($_POST['texteHaut']) && !empty($_POST['texteHaut']) || isset($_POST['te
 	$couleur2 = imagecolorallocate($image, $c1, $c2, $c3);//couleur du texte de haut
 
 //on insere le texte sur limage avec nos variable envoyer par ajax, dont modif en temps reel
-imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/ifti.ttf', $post);
-imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/ifti.ttf', $post1);
+imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/IMPACTED.ttf', $post);
+imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/IMPACTED.ttf', $post1);
 
 	if(isset($_POST['auteur']) && isset($_POST['nomMeme']) && !empty($_POST['auteur']) && !empty($_POST['nomMeme'])) 
 	{	//on verifie que lartiste nomme son fichier et sidentifie
@@ -54,7 +54,10 @@ imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $c
     	ob_end_clean ();
 		$enc = base64_encode($objet);
 		echo($enc);
-		imagejpeg($image, 'images/memeFini/'.$nomMeme.'.png'); //on enregistre limage dans un dossier
+		imagejpeg($image, 'images/memeFini/'.$nomMeme.'.png');
+		 //on enregistre limage dans un dossier
+
+		 
 
 	$bdd = new PDO('mysql:host=localhost;dbname=meme;charset=utf8', 'root', '');
 	$req = $bdd->prepare('INSERT INTO memedefaut(nom, auteur) VALUES (:nom, :auteur)'); //insertion des articles dans leur base de de données

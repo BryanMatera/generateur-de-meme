@@ -12,8 +12,8 @@
 </head>
 <body>
 	<header>
-		<div class="logo">Faites qu'on meme</div>
-		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
+		<p class="logo">FQM<span id="spanLogo">Faut qu'on meme</span></p>
+		<a class="creer" href="index.php">Voir les autres memes</a>
 	</header>
 	</br>
 	<div class="memepresentation">

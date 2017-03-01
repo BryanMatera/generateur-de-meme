@@ -43,7 +43,7 @@ $(document).ready(function () {
     $("#submit1").on('click', function (e) 
     { //submit du formulaire qui enregistre le meme avec les modifications
 
-        e.preventDefault();
+        	e.preventDefault();
             var texteHaut = $('#test').val();//valeur des input des modifs 
 			var texteBas = $('#test1').val();
 			var colorHaut = $('#color').val();//valeur des input des modifs 
@@ -74,9 +74,11 @@ $(document).ready(function () {
 										'texteBas':texteBas,
 										'colorHaut':colorHaut,//ces ces valeur envoyés pour enregistrement du meme qui se fait dans la page php
 										'colorBas':colorBas},function(data)
-					{
-					
-					});
+										{
+											
+										});
+			alert('bjr');
+			$('#recupAjax2').html('<a id="teleMemeFini" style="width: 200px; height: 100px;" href="images/memeFini/'+ nomMeme +'.png" download>Télécharger votre meme</a>');
 				
             });
 

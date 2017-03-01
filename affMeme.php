@@ -44,8 +44,8 @@ if(isset($_POST['texteHaut']) && !empty($_POST['texteHaut']) || isset($_POST['te
 
 	//On insere dans limage les deux textes, ils prennent en comte les valeur des input de modifs
 	// envoyes en ajax, ce qui nous permet la modif en temps reel  lappui du bouton preview
-	imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/ifti.ttf', $post);
-	imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/ifti.ttf', $post1);
+	imagettftext($image, $tailleHaut, $rotationHaut, $leftPhraseHaut, $topPhraseHaut, $couleur2, 'paprasse/IMPACTED.ttf', $post);
+	imagettftext($image, $tailleBas, $rotationBas, $leftPhraseBas, $topPhraseBas, $couleur1, 'paprasse/IMPACTED.ttf', $post1);
 
 	
 	ob_start(); //debut variable
