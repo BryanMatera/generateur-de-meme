@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	$(".change").change(function (event) 
+	$(".change").on('change keyup', function (event) 
 	{ //submit du formulaire de preview du meme
 
     	event.preventDefault();
@@ -40,7 +40,7 @@ $(document).ready(function () {
 			}
     });
 
-    $(".change").change(function (e) 
+    $(".change").on('change keyup', function (e) 
     { //submit du formulaire qui enregistre le meme avec les modifications
 
         e.preventDefault();
