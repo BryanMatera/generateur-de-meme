@@ -26,7 +26,6 @@ session_start();
             
             move_uploaded_file($nom_image,$image);
             $_SESSION['image'] = $image;
-    		echo "<img id='imagePreMeme' src='$image' width='300'/>";
             
         }
         else{
