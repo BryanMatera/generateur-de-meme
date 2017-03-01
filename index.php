@@ -19,7 +19,7 @@
 		<a class="creer" href="creationmemes.php">Je créé mon meme</a>
 
 	</header>
-	</br>
+	<h1>Tous les memes</h1>
 	<div class="memepresentation">
 		<?php 
 		$memes = $DB->query('SELECT * FROM memedefaut ORDER BY id DESC');
@@ -30,8 +30,8 @@
 			<a href="detailsmeme.php?id=<?= $meme->nom; ?>&name=<?= $meme->auteur; ?>"><img class="memedefaut" src="images/memeFini/<?= $meme->nom; ?>.png"/></a>
 			<p><?= $meme->nom; ?></p>
 			<p>Créé par : <?= $meme->auteur; ?></p>
-			<a href="http://www.facebook.com/sharer/sharer.php?url=<?= $url; ?><?= $meme->nom; ?>" class="fa fa-facebook twitter" target="_blank"></a>
-			<a href="https://twitter.com/intent/tweet/?url=<?= $url; ?><?= $meme->nom; ?>" class="fa fa-twitter twitter" target="_blank"></a>
+			<a href="http://www.facebook.com/sharer/sharer.php?url=<?= $url; ?><?= $meme->nom; ?>&name=<?= $meme->auteur; ?>" class="fa fa-facebook twitter" target="_blank"></a>
+			<a href="https://twitter.com/intent/tweet/?url=<?= $url; ?><?= $meme->nom; ?>&name=<?= $meme->auteur; ?>" class="fa fa-twitter twitter" target="_blank"></a>
 
 			</div>
 		<?php endforeach; ?>
