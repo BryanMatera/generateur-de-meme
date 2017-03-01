@@ -9,7 +9,9 @@ header{
 	align-items: center;
 }
 
+
 /*-----------------------PAGE ACCUEIL------------------------*/
+
 .creer{
 	text-decoration: none;
 	text-align: center;
@@ -17,9 +19,9 @@ header{
 	padding-bottom: 10px;
 	width: 150px;
 	border: 1px solid red;
-	color: black;
 	border-radius: 20px;
 }
+
 .creer:hover{
 	text-decoration: none;
 	color: black;
