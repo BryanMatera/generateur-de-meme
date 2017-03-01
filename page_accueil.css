@@ -87,3 +87,24 @@ header{
 	height: 50%;
 	width: 100%;
 }
+
+@media screen and (max-width: 450px) {
+
+	header {
+		display: block;
+		padding-bottom: 15px;
+		margin: 0px;
+		padding-top: 15px;
+	}
+
+	.creer {
+		text-align: center;
+	}
+
+	.logo {
+		text-align: center;
+		font-size: 25px;
+		margin-top: 0px;
+	}
+  
+}
