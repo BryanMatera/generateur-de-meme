@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	$("#submit").click(function (event) 
+	$(".change").change(function (event) 
 	{ //submit du formulaire de preview du meme
 
     	event.preventDefault();
@@ -40,7 +40,7 @@ $(document).ready(function () {
 			}
     });
 
-    $("#submit1").click(function (e) 
+    $(".change").change(function (e) 
     { //submit du formulaire qui enregistre le meme avec les modifications
 
         e.preventDefault();

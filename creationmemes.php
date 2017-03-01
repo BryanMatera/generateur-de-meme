@@ -23,23 +23,22 @@
 
 <form method="post" id="formAjoutText" action=""><!--formulaire dajout de texte a limage-->
 									<!--texte du haut-->
-									<input type="text" name="test" id="test" value="Texte du haut" >
-									<input type="color" name="color" id="color"><!--sa couleur-->
-	<label>Taille :</label>			<input type="number" name="tailleHaut" id="tailleHaut" value="20" min="1" max="30"><!--taille de police-->
-	<label>Rotation :</label>		<input type="number" value="10" name="rotation" id="rotation" min="-100" max="100">
-	<label>Distance gauche :</label><input type="number" value="50" name="left" id="left" min="0" max="150">
-	<label>Distance haut :</label>	<input type="number" value="50" name="top" id="top" min="0" max="150"><br>
+									<input class="change" type="text" name="test" id="test" value="Texte du haut" >
+									<input class="change" type="color" name="color" id="color"><!--sa couleur-->
+	<label>Taille :</label>			<input class="change" type="number" name="tailleHaut" id="tailleHaut" value="20" min="1" max="30"><!--taille de police-->
+	<label>Rotation :</label>		<input class="change" type="number" value="10" name="rotation" id="rotation" min="-100" max="100">
+	<label>Distance gauche :</label><input class="change" type="number" value="50" name="left" id="left" min="0" max="150">
+	<label>Distance haut :</label>	<input class="change" type="number" value="50" name="top" id="top" min="0" max="150"><br>
 
 									<!--texte du bas-->
-									<input type="text" name="test1" id="test1" value="Texte du bas"> 
-									<input type="color" name="color1" id="color1"><!--couleur-->
-	<label>Taille :					<input type="number" name="tailleBas" id="tailleBas" value="20"  min="1" max="30"><!--taille de police-->
-	<label>Rotation :</label> 		<input type="number" name="rotation1" value="-10" id="rotation1" min="-100" max="100">
-	<label>Distance gauche :</label><input type="number" name="left1" value="50" id="left1" min="0" max="150">
-	<label>Distance haut :</label>	<input type="number" name="top1" value="150" id="top1" min="0" max="150"><br>
+									<input class="change" type="text" name="test1" id="test1" value="Texte du bas"> 
+									<input class="change" type="color" name="color1" id="color1"><!--couleur-->
+	<label>Taille :					<input class="change" type="number" name="tailleBas" id="tailleBas" value="20"  min="1" max="30"><!--taille de police-->
+	<label>Rotation :</label> 		<input class="change" type="number" name="rotation1" value="-10" id="rotation1" min="-100" max="100">
+	<label>Distance gauche :</label><input class="change" type="number" name="left1" value="50" id="left1" min="0" max="150">
+	<label>Distance haut :</label>	<input class="change" type="number" name="top1" value="150" id="top1" min="0" max="150"><br>
 
 
-	<input type="submit" id="submit" name="submit" value="Gener un meme a partir de cette image">
 
 </form> <!--fin de formulaire de modification dimage-->
 
